@@ -21,7 +21,7 @@ This compression tool was designed to handle the DNA bases and gap symbols that 
 ## Examples ##
 
 # CITE #
-If you use this software, please cite the follwing publication: 
+If you use this software, please cite the following publication: 
 * [Luís M. O. Matos](http://sweet.ua.pt/luismatos), [Diogo Pratas](http://sweet.ua.pt/pratas), and [Armando J. Pinho](http://sweet.ua.pt/ap), ["A Compression Model for DNA Multiple Sequence Alignment Blocks"](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6415270), in [IEEE Transactions on Information Theory](http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=18), volume 59, number 5, pages 3189-3198, May 2013.
 
 # ISSUES #
