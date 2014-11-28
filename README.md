@@ -28,4 +28,4 @@ If you use this software, please cite the following publication:
 At the time, there are no relevant issues detected but if you find one please let me know using the [issues link](https://github.com/lumiratos/saco/issues) at GitHub.
 
 # COPYRIGHT #
-Copyright (c) 2014 Luís M. O. Matos. See LICENSE.txt for further details.
+Copyright (c) 2014 Luís M. O. Matos. See [LICENSE.txt](https://github.com/lumiratos/saco/blob/master/LICENSE.txt) for further details.
