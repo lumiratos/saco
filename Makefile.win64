@@ -1,0 +1,67 @@
+BIN_DIR = ./bin/win64
+SRC_DIR = ./src
+OBJS_DIR = ./objs/win64
+
+CC = /usr/bin/x86_64-w64-mingw32-gcc # 64-bit Windows gcc
+
+CFLAGS = -O3 -Wall -fno-strict-aliasing
+
+LIBS = -lm
+DEPS = $(SRC_DIR)/defs.h
+
+PROGS = $(BIN_DIR)/SACOe64.exe $(BIN_DIR)/SACOd64.exe $(BIN_DIR)/MAFSplit64.exe
+
+OBJS =  $(OBJS_DIR)/bitio.o $(OBJS_DIR)/arith.o \
+	$(OBJS_DIR)/arith_aux.o $(OBJS_DIR)/common.o \
+	$(OBJS_DIR)/mem.o $(OBJS_DIR)/context.o \
+	$(OBJS_DIR)/mafImg.o
+
+all: dir $(PROGS)
+
+dir:
+	@if [ ! -d $(OBJS_DIR) ];\
+	then\
+		mkdir $(OBJS_DIR);\
+	fi
+
+# Encoder
+$(BIN_DIR)/SACOe64.exe: $(SRC_DIR)/SACOe.c $(DEPS) $(OBJS)
+	$(CC) $(CFLAGS) -o $(BIN_DIR)/SACOe64.exe $(SRC_DIR)/SACOe.c $(OBJS) $(LIBS)
+	
+# Decoder
+$(BIN_DIR)/SACOd64.exe: $(SRC_DIR)/SACOd.c $(DEPS) $(OBJS)
+	$(CC) $(CFLAGS) -o $(BIN_DIR)/SACOd64.exe $(SRC_DIR)/SACOd.c $(OBJS) $(LIBS)
+
+# MAF Extractor
+$(BIN_DIR)/MAFSplit64.exe: $(SRC_DIR)/MAFSplit.c $(OBJS)
+	$(CC) $(CFLAGS) -o $(BIN_DIR)/MAFSlipt64.exe $(SRC_DIR)/MAFSplit.c $(OBJS) $(LIBS)
+
+$(OBJS_DIR)/bitio.o: $(SRC_DIR)/bitio.h $(SRC_DIR)/bitio.c
+	$(CC) -c $(CFLAGS) -o $(OBJS_DIR)/bitio.o $(SRC_DIR)/bitio.c
+
+$(OBJS_DIR)/arith.o: $(SRC_DIR)/arith.h $(SRC_DIR)/arith.c
+	$(CC) -c $(CFLAGS) -o $(OBJS_DIR)/arith.o $(SRC_DIR)/arith.c
+
+$(OBJS_DIR)/arith_aux.o: $(SRC_DIR)/arith_aux.h $(SRC_DIR)/arith_aux.c
+	$(CC) -c $(CFLAGS) -o $(OBJS_DIR)/arith_aux.o $(SRC_DIR)/arith_aux.c
+
+$(OBJS_DIR)/common.o: $(SRC_DIR)/common.h $(SRC_DIR)/common.c $(DEPS)
+	$(CC) -c $(CFLAGS) -o $(OBJS_DIR)/common.o $(SRC_DIR)/common.c
+
+$(OBJS_DIR)/mem.o: $(SRC_DIR)/mem.h $(SRC_DIR)/mem.c
+	$(CC) -c $(CFLAGS) -o $(OBJS_DIR)/mem.o $(SRC_DIR)/mem.c
+
+$(OBJS_DIR)/context.o: $(SRC_DIR)/context.h $(SRC_DIR)/context.c $(DEPS)
+	$(CC) -c $(CFLAGS) -o $(OBJS_DIR)/context.o $(SRC_DIR)/context.c
+
+$(OBJS_DIR)/mafImg.o: $(SRC_DIR)/mafImg.h $(SRC_DIR)/mafImg.c $(DEPS)
+	$(CC) -c $(CFLAGS) -o $(OBJS_DIR)/mafImg.o $(SRC_DIR)/mafImg.c
+
+
+clean:
+	/bin/rm -f $(OBJS_DIR)/*.o $(PROGS)
+
+clean-all:
+	/bin/rm -f $(OBJS_DIR)/*.o $(PROGS)
+	clear
+
