@@ -84,6 +84,20 @@ The most relevant options are:
   </table>
 
 ## Decoding ##
+The SACOd, SACOd32.exe, and SACOd64.exe programs have the following interface:
+
+<pre>Usage: SACOd [options] ... [Encoded File]</pre>
+The most relevant options are:
+<table align="center">
+    <tr> 
+      <td width="25%">-o [decodedFile]</td> 
+      <td width="75%">If present, it writes the decoded data into file "decodedFile".</td>
+    </tr>
+    <tr> 
+      <td width="25%">-v</td> 
+      <td width="75%">Activates the verbose mode.</td>
+    </tr>
+</table>
 
 ## Examples ##
 
