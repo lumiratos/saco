@@ -30,7 +30,6 @@ to get the "bin/win32/SACOe64.exe" (encoder) and "bin/win32/SACOd64.exe" (decode
 The encoder seems to work just fine however it seems that there is a bug in the decoder that will be fixed in the next commit...
 
 # USAGE #
-
 ## Encoding ##
 The SACOe, SACOe32.exe, and SACOe64.exe programs have several parameters that can be defined by the user. In the following you can find a description with the most relevant parameters available.
 
@@ -82,28 +81,44 @@ The most relevant options are:
           <td width="65%">Gamma value used in the model mixture.</td>
         </tr>
   </table>
-<!-- ## Decoding ##
+  
+## Decoding ##
 The SACOd, SACOd32.exe, and SACOd64.exe programs have the following interface:
 
 <pre>Usage: SACOd [options] ... [Encoded File]</pre>
-The most relevant options are:
+
+<!--The available options are:
 <table align="center">
-    <tr> 
-      <td width="25%">-o [decodedFile]</td> 
-      <td width="75%">If present, it writes the decoded data into file "decodedFile".</td>
-    </tr>
-    <tr> 
-      <td width="25%">-v</td> 
-      <td width="75%">Activates the verbose mode.</td>
-    </tr>
-</table>
--->
+        <tr> 
+          <td width="35%">-v</td> 
+          <td width="65%"> Activates vervose mode. </td>
+        </tr>
+        <tr> 
+                <td width="25%">-o [decodedFile]</td> 
+                <td width="75%">If present, it writes the decoded data into file "decodedFile".</td>
+        </tr>
+</table> -->
+
 ## Examples ##
+In the following, we will show some examples of how to use this tool in a linux environment.
+
+We can encode a MAF file using for example two models (order-9 and order-11) and put the encoded file in "file.enc" by typing:
+<pre>$ SACOe -u 9 -u 11 -o file.enc chrM.maf</pre>
+
+For decoding the encoded file just type:
+<pre>$ SACOd -o file.dec file.enc</pre>
 
 # CITE #
 If you use this software, please cite the following publications: 
 * [Luís M. O. Matos](http://sweet.ua.pt/luismatos), [Diogo Pratas](http://sweet.ua.pt/pratas), and [Armando J. Pinho](http://sweet.ua.pt/ap), ["A Compression Model for DNA Multiple Sequence Alignment Blocks"](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6415270), in [IEEE Transactions on Information Theory](http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=18), volume 59, number 5, pages 3189-3198, May 2013.
 * [Luís M. O. Matos](http://sweet.ua.pt/luismatos), [Diogo Pratas](http://sweet.ua.pt/pratas), and [Armando J. Pinho](http://sweet.ua.pt/ap), ["Compression of whole genome alignments using a mixture of finite-context models"](https://dl.dropboxusercontent.com/u/1944285/publications/ConferencePapers/Matos-2012c.pdf), in [Proceedings of the International Conference on Image Analysis and Recognition, ICIAR 2012](http://www.aimiconf.org/iciar12), Editors A. Campilho and M. Kamel, volume 2324 of Lecture Notes in Computer Science (LNCS), pages 359-366, Springer Berlin Heidelberg, Aveiro, Portugal, June 2012.
+
+# DATA SETS #
+Some data set that can be used for evaluate this tool.
+* [multiz28way](http://hgdownload-test.cse.ucsc.edu/goldenPath/hg18/multiz28way)
+* [multiz28wayB](http://hgdownload-test.cse.ucsc.edu/goldenPath/hg18/multiz28way/multiz28wayAnno.tar.gz)
+* [multiz46way](http://hgdownload-test.cse.ucsc.edu/goldenPath/hg19/multiz46way)
+* [multiz100way](http://hgdownload-test.cse.ucsc.edu/goldenPath/hg19/multiz100way)
 
 # ISSUES #
 The windows decoders (SACOd32.exe and SACOd64.exe) have a bug that will be fixed very soon...
