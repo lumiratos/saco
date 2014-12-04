@@ -21,8 +21,9 @@ This compression tool was designed to handle the DNA bases and gap symbols that 
 ## Examples ##
 
 # CITE #
-If you use this software, please cite the following publication: 
+If you use this software, please cite the following publications: 
 * [Luís M. O. Matos](http://sweet.ua.pt/luismatos), [Diogo Pratas](http://sweet.ua.pt/pratas), and [Armando J. Pinho](http://sweet.ua.pt/ap), ["A Compression Model for DNA Multiple Sequence Alignment Blocks"](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6415270), in [IEEE Transactions on Information Theory](http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=18), volume 59, number 5, pages 3189-3198, May 2013.
+* [Luís M. O. Matos](http://sweet.ua.pt/luismatos), [Diogo Pratas](http://sweet.ua.pt/pratas), and [Armando J. Pinho](http://sweet.ua.pt/ap), ["Compression of whole genome alignments using a mixture of finite-context models"](https://dl.dropboxusercontent.com/u/1944285/publications/ConferencePapers/Matos-2012c.pdf), in Proceedings of the International Conference on Image Analysis and Recognition, ICIAR 2012](http://www.aimiconf.org/iciar12), Editors A. Campilho and M. Kamel, volume 2324 of Lecture Notes in Computer Science (LNCS), pages 359-366, Springer Berlin Heidelberg, Aveiro, Portugal, June 2012.
 
 # ISSUES #
 At the time, there are no relevant issues detected but if you find one please let me know using the [issues link](https://github.com/lumiratos/saco/issues) at GitHub.
