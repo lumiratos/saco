@@ -32,6 +32,56 @@ The encoder seems to work just fine however it seems that there is a bug in the 
 # USAGE #
 
 ## Encoding ##
+The SACOe, SACOe32.exe, and SACOe64.exe programs have several parameters that can be defined by the user. In the following you can find a description with the most relevant parameters available.
+
+<pre>Usage: SACOe [options] ... [MAF File]</pre>
+The most relevant options are:
+<table align="center">
+        <tr> 
+          <td width="25%">-v</td> 
+          <td width="75%">Activates vervose mode.</td>
+        </tr>
+        <tr> 
+          <td width="25%">-h</td> 
+          <td width="75%">Prints some help information.</td>
+        </tr>
+        <tr> 
+          <td width="25%">-o [encodedFile]</td> 
+          <td width="75%">If present, it writes the encoded data into file "encodedFile".</td>
+        </tr>
+        <tr> 
+          <td width="25%">-e</td> 
+          <td width="75%">Estimation only. Does not create the binary compressed file.</td>
+        </tr>
+        <tr> 
+          <td width="25%">-alm</td> 
+          <td width="75%">Activate the acenstral line mode.</td>
+        </tr>
+        <tr> 
+          <td width="25%">-scm</td> 
+          <td width="75%">Activate the static column model.</td>
+        </tr>
+        <tr> 
+          <td width="25%">-cm1 [n/d t=threshold]</td> 
+          <td width="75%">Columnwise Model 1.</td>
+        </tr>
+         <tr> 
+          <td width="25%">-cmn [n/d t=threshold]</td> 
+          <td width="75%">Columnwise Model N.</td>
+        </tr>
+         <tr> 
+          <td width="25%">-u 0 [leftSize-rightSize n/d t=threshold]</td> 
+          <td width="75%">Ancestral context model with "leftSize" symbols on the left and "rightSize" symbols on the right.</td>
+        </tr>
+        <tr> 
+          <td width="25%">-u template [n/d t=threshold]</td> 
+          <td width="75%">2D image context template. Templates available 1-14 and 20-24.</td>
+        </tr>
+        <tr> 
+          <td width="25%">-g [gamma]</td> 
+          <td width="75%">Gamma value used in the model mixture.</td>
+        </tr>
+  </table>
 
 ## Decoding ##
 
