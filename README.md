@@ -82,8 +82,7 @@ The most relevant options are:
           <td width="65%">Gamma value used in the model mixture.</td>
         </tr>
   </table>
-
-## Decoding ##
+<!-- ## Decoding ##
 The SACOd, SACOd32.exe, and SACOd64.exe programs have the following interface:
 
 <pre>Usage: SACOd [options] ... [Encoded File]</pre>
@@ -98,7 +97,7 @@ The most relevant options are:
       <td width="75%">Activates the verbose mode.</td>
     </tr>
 </table>
-
+-->
 ## Examples ##
 
 # CITE #
