@@ -5,14 +5,16 @@ This compression tool was designed to handle the DNA bases and gap symbols that 
 
 
 # INSTALLATION #
-In order to compile the source code, you will need to install a GCC compiler on a Unix platform (Linux or OS X). If you are using Windows, it will be easy to use the pre-compiled binaries that are in folders "bin/win32" and "bin/win64".
+In order to compile the source code, you will need to install a GCC compiler on a Unix platform (Linux or OS X). If you are using Windows, it will be easy to use the pre-compiled binaries that are in folders [win32](https://github.com/lumiratos/saco/blob/master/bin/win32) and [win64](https://github.com/lumiratos/saco/blob/master/bin/win64).
+
 
 ## Linux ##
 For Linux users, install the build-essentials package which contains GCC and other utilities in order to be able to compile the source code. To install the build-essentials package type:
 <pre>sudo apt-get install build-essential</pre>
 After that you only need to type:
 <pre>make -f Makefile.linux</pre>
-to create the binaries "bin/linux/SACOe" (encoder) and "bin/linux/SACOd" (decoder).
+to create the binaries [SACOe](https://github.com/lumiratos/saco/blob/master/bin/linux/SACOe) (encoder) and  [SACOd](https://github.com/lumiratos/saco/blob/master/bin/linux/SACOd) (decoder).
+
 
 ## OS X ##
 For OS X users, it depends on which Xcode version is installed. For the most recent versions, you will need to install the "Command Line Tool" in order to have the "make" utility. It seems that the "Command Line Tools" are not installed by default anymore when you install Xcode. In order to install them, open Xcode, go to Preferences -> Downloads -> Components -> Command Line Tools. This also should install a GCC compiler as well. If you want a recent compiler you can install it using Homebrew by typing the following command in a Terminal:
