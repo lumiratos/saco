@@ -21,19 +21,19 @@ For OS X users, it depends on which Xcode version is installed. For the most rec
 <pre>brew install gcc48</pre>
 After that, we need to make sure that the "CC" variable in the "Makefile.osx" file is linked to the GCC previously installed. The most recent versions of XCode come with a modified version of GCC known as LLVM. This tool was not tested using LLVM so it will probably not work if you try to compile the code using it. In order to generate the binaries just type:
 <pre>make -f Makefile.osx</pre>
-to create the binaries "bin/osx/SACOe" (encoder) and "bin/osx/SACOd" (decoder).
+to create the binaries [SACOe](https://github.com/lumiratos/saco/blob/master/bin/osx/SACOe) (encoder) and [SACOd](https://github.com/lumiratos/saco/blob/master/bin/osx/SACOd) (decoder).
 
 ## Windows ##
 The source code was NOT tested in a Windows enviroment. Nevertheless, you can compile the code using a cross-compiler in a Linux environment after installing the cross-compiler [MinGW-w64](http://mingw-w64.sourceforge.net). After installing MinGW-w64, just type:
 <pre>make -f Makefile.win32</pre>
-to get the "bin/win32/SACOe32.exe" (encoder) "bin/win32/SACOd32.exe" (decoder) executables (32-bits architecture) and for the 64-bits architecture just type:
+to get the [SACOe32.exe](https://github.com/lumiratos/saco/blob/master/bin/win32/SACOe32.exe) (encoder) [SACOd32.exe](https://github.com/lumiratos/saco/blob/master/bin/win32/SACOd32.exe) (decoder) executables (32-bits architecture) and for the 64-bits architecture just type:
 <pre>make -f Makefile.win64</pre> 
-to get the "bin/win32/SACOe64.exe" (encoder) and "bin/win32/SACOd64.exe" (decoder) executables.
-The encoder seems to work just fine however it seems that there is a bug in the decoder that will be fixed in the next commit...
+to get the [SACOe64.exe](https://github.com/lumiratos/saco/blob/master/bin/win64/SACOe64.exe) (encoder) and [SACOd64.exe](https://github.com/lumiratos/saco/blob/master/bin/win64/SACOd64.exe) (decoder) executables.
+The encoder seems to work just fine however  there is a bug in the decoder that will be fixed soon...
 
 # USAGE #
 ## Encoding ##
-The SACOe, SACOe32.exe, and SACOe64.exe programs have several parameters that can be defined by the user. In the following you can find a description with the most relevant parameters available.
+The [SACOe](https://github.com/lumiratos/saco/blob/master/bin/linux/SACOe), [SACOe32.exe](https://github.com/lumiratos/saco/blob/master/bin/win32/SACOe32.exe), and [SACOe64.exe](https://github.com/lumiratos/saco/blob/master/bin/win64/SACOe64.exe) programs have several parameters that can be defined by the user. In the following you can find a description with the most relevant parameters available.
 
 <pre>Usage: SACOe [options] ... [MAF File]</pre>
 The most relevant options are:
@@ -85,7 +85,8 @@ The most relevant options are:
   </table>
   
 ## Decoding ##
-The SACOd, SACOd32.exe, and SACOd64.exe programs have the following interface:
+The [SACOd](https://github.com/lumiratos/saco/blob/master/bin/linux/SACOd), [SACOd32.exe](https://github.com/lumiratos/saco/blob/master/bin/win32/SACOd32.exe), and [SACOd64.exe](https://github.com/lumiratos/saco/blob/master/bin/win64/SACOd64.exe) programs have the following interface:
+
 
 <pre>Usage: SACOd [options] ... [Encoded File]</pre>
 
@@ -113,7 +114,7 @@ For decoding the encoded file just type:
 # CITE #
 If you use this software, please cite the following publications: 
 * [Luís M. O. Matos](http://sweet.ua.pt/luismatos), [Diogo Pratas](http://sweet.ua.pt/pratas), and [Armando J. Pinho](http://sweet.ua.pt/ap), ["A Compression Model for DNA Multiple Sequence Alignment Blocks"](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6415270), in [IEEE Transactions on Information Theory](http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=18), volume 59, number 5, pages 3189-3198, May 2013.
-* [Luís M. O. Matos](http://sweet.ua.pt/luismatos), [Diogo Pratas](http://sweet.ua.pt/pratas), and [Armando J. Pinho](http://sweet.ua.pt/ap), ["Compression of whole genome alignments using a mixture of finite-context models"](https://dl.dropboxusercontent.com/u/1944285/publications/ConferencePapers/Matos-2012c.pdf), in [Proceedings of the International Conference on Image Analysis and Recognition, ICIAR 2012](http://www.aimiconf.org/iciar12), (Editors: A. Campilho and M. Kamel, volume 2324 of Lecture Notes in Computer Science (LNCS)), pages 359-366, Springer Berlin Heidelberg, Aveiro, Portugal, June 2012.
+* [Luís M. O. Matos](http://sweet.ua.pt/luismatos), [Diogo Pratas](http://sweet.ua.pt/pratas), and [Armando J. Pinho](http://sweet.ua.pt/ap), ["Compression of whole genome alignments using a mixture of finite-context models"](http://doi.org/10.1007/978-3-642-31295-3_42), in [Proceedings of the International Conference on Image Analysis and Recognition, ICIAR 2012](http://www.aimiconf.org/iciar12), (Editors: A. Campilho and M. Kamel, volume 2324 of Lecture Notes in Computer Science (LNCS)), pages 359-366, Springer Berlin Heidelberg, Aveiro, Portugal, June 2012.
 
 # DATA SETS #
 Some data set that can be used for evaluate this tool.
@@ -123,7 +124,7 @@ Some data set that can be used for evaluate this tool.
 * [multiz100way](http://hgdownload-test.cse.ucsc.edu/goldenPath/hg19/multiz100way)
 
 # ISSUES #
-The windows decoders (SACOd32.exe and SACOd64.exe) have a bug that will be fixed very soon...
+The windows decoders ([SACOd32.exe](https://github.com/lumiratos/saco/blob/master/bin/win32/SACOd32.exe) and [SACOd64.exe](https://github.com/lumiratos/saco/blob/master/bin/win64/SACOd64.exe)) have a bug that will be fixed soon...
 For other issues please use the [issues link](https://github.com/lumiratos/saco/issues) at GitHub.
 <!---
 At the time, there are no relevant issues detected but if you find one please let me know using the [issues link](https://github.com/lumiratos/saco/issues) at GitHub.
